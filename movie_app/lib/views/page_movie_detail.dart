@@ -63,19 +63,19 @@ class MovieDetailPage extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 8.0),
+                      const SizedBox(height: 8.0),
                       Text(
                         '${movie.genre} • ${movie.duration}',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16.0,
                           color: Colors.grey,
                         ),
                       ),
-                      SizedBox(height: 16.0),
+                      const SizedBox(height: 16.0),
                       Text(
                         movie.description,
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16.0,
                           fontFamily: 'Oxygen',
                         ),
@@ -83,9 +83,8 @@ class MovieDetailPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 8.0, horizontal: 16.0),
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
                   child: Text(
                     "Casts",
                     style: TextStyle(
@@ -120,6 +119,8 @@ class MovieDetailPage extends StatelessWidget {
 }
 
 class BackButtonWidget extends StatelessWidget {
+  const BackButtonWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -127,12 +128,12 @@ class BackButtonWidget extends StatelessWidget {
         Navigator.pop(context);
       },
       child: Container(
-        padding: EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(12.0),
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: Colors.black.withOpacity(0.6),
         ),
-        child: Icon(
+        child: const Icon(
           Icons.arrow_back,
           color: Colors.white,
         ),
@@ -160,7 +161,7 @@ class _FavoriteButtonState extends State<FavoriteButton> {
         });
       },
       child: Container(
-        padding: EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(12.0),
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: Colors.black.withOpacity(0.6),
