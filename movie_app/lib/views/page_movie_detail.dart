@@ -11,11 +11,11 @@ class MovieDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: <Widget>[
+        children: [
           SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
+              children: [
                 Stack(
                   children: [
                     Container(
@@ -54,7 +54,7 @@ class MovieDetailPage extends StatelessWidget {
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
+                    children: [
                       Text(
                         movie.title,
                         style: const TextStyle(

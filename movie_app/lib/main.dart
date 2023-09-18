@@ -13,7 +13,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Movie App',
       theme: ThemeData(),
-      home: const HomePage(),
+      initialRoute: '/home',
+      routes: {
+        '/home': (context) => const HomePage(),
+        '/profile': (context) => const ProfilePage(),
+        // '/movieDetail': (context) => const MovieDetailPage(),
+      },
     );
   }
 }
