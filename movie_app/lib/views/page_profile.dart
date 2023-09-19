@@ -25,6 +25,15 @@ class _ProfilePageState extends State<ProfilePage> {
   TextEditingController _aboutMeController = TextEditingController();
   TextEditingController _profilePictureUrlController = TextEditingController();
 
+  @override
+  dispose(){
+    _nameController.dispose();
+    _jobController.dispose();
+    _aboutMeController.dispose();
+    _profilePictureUrlController.dispose();
+    super.dispose();
+  }
+
   bool _isEditing = false;
 
   @override
